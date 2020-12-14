@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="#">Anasayfa
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -38,9 +38,9 @@
                         </div>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Hakkımızda</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
                 </ul>
             </div>
         </div>
