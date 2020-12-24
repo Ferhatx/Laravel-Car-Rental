@@ -19,16 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Menüler ve Cssde değişiklikler">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/_scroll.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Admin Panelini Parçalayıp Laravele Yerleştirme">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +192,7 @@
       <workItem from="1607944953973" duration="4267000" />
       <workItem from="1608674017204" duration="1270000" />
       <workItem from="1608676269420" duration="2104000" />
-      <workItem from="1608837989396" duration="7988000" />
+      <workItem from="1608837989396" duration="10082000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -215,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607950772404</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Admin Panelini Parçalayıp Laravele Yerleştirme">
+      <created>1608850072904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608850072904</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +236,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="index değişti" />
     <MESSAGE value="Menüler ve Cssde değişiklikler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menüler ve Cssde değişiklikler" />
+    <MESSAGE value="Admin Panelini Parçalayıp Laravele Yerleştirme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Panelini Parçalayıp Laravele Yerleştirme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607274802464">
@@ -247,14 +248,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="746" y="279" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1608847572485" />
+    <state x="528" y="66" key="RollbackChangesDialog" timestamp="1608850238738">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="528" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608850238737" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1607291638247">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1607950797672">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1608850109685">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607950797672" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608850109685" />
+    <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1608850805078">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.728@0.0.1366.728" timestamp="1608850805078" />
     <state x="0" y="0" width="1009" height="614" key="dock-window-1" timestamp="1607283915833">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
