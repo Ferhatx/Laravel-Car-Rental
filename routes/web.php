@@ -36,3 +36,6 @@ Route::get('/', function () {
 //Route::get('/anasayfa', [HomeController::class, 'index']); bu controller gidip alır
 
 Route::get('/hakkimizda',[HomeController::class,'hakkimizda']);
+
+//ADMİN PANEL
+Route::get('/admin',[App\Http\Controllers\Admin\HomeController::class,'index'])->name('adminhome');
