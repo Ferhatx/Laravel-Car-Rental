@@ -11,11 +11,11 @@ class Authenticate extends Middleware
      *
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
-     */
+     */    /*BURASI  EĞER ŞİFRE YANLIŞSA NERE GİDECEĞİNİ GÖSTERİYOR*/
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return route('login');
+            return route('admin_login');
         }
     }
 }
