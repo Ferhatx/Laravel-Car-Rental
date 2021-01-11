@@ -10,7 +10,15 @@ Route::post('/admin/logincheck',[App\Http\Controllers\Admin\HomeController::clas
 Route::get('/admin/logout',[App\Http\Controllers\Admin\HomeController::class,'logout'])->name('admin_logout');
 
 
-
+//CATEGORY
+Route::middleware('auth')->prefix('admin')->group(function (){
+    Route::get('/',[App\Http\Controllers\Admin\HomeController::class,'index'])->name('admin_home');
+    Route::get('category',[App\Http\Controllers\Admin\CategoryController::class,'index'])->name('admin_category');
+    Route::get('category/add',[App\Http\Controllers\Admin\CategoryController::class,'add'])->name('admin_category_add');
+    Route::get('category/update',[App\Http\Controllers\Admin\CategoryController::class,'update'])->name('admin_category_update');
+    Route::get('category/delete',[App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_delete');
+    Route::get('category/show',[App\Http\Controllers\Admin\CategoryController::class,'show'])->name('admin_category_show');
+});
 
 
 Route::get('/home2', function () {
