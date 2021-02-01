@@ -15,6 +15,12 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <a href="{{route('admin_category_add')}}" class="btn btn-success btn-icon-split" style="margin-left:350px; ">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                            <span class="text">Kategory Ekle</span>
+                        </a><br/>
                         <thead>
                         <tr>
                             <th>Id</th>
@@ -33,8 +39,8 @@
                             <td>{{$rs->parent_id}}</td>
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->status}}</td>
-                            <td>Edit</td>
-                            <td>Delete</td>
+                            <td>Düzenle</td>
+                            <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')">Sil</a> </td>
                         </tr>
                         @endforeach
                         </tbody>

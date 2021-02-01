@@ -1,3 +1,8 @@
+@extends('layouts.admin')
+
+@section('title', 'X Rent A Car Admin Panel')
+
+@section("content")
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -6,3 +11,4 @@
 
 </div>
 <!-- /.container-fluid -->
+@endsection

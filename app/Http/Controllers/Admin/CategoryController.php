@@ -27,12 +27,39 @@ class CategoryController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     *
+     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        //echo "test ekle";
+        DB::table('categories')->insert([
+            'parent_id' => $request->input('parent_id'),
+            'title' => $request->input('title'),
+            'keywords' => $request->input('keywords'),
+            'description' => $request->input('description'),
+            'slug' => $request->input('slug'),
+            'status' => $request->input('status')
+        ]);
+        return redirect()->route('admin_category');
+
     }
+
+    /**
+     * Show the form for add a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function add()
+    {
+        $datalist = DB::table( 'categories')->get()->where('parent_id',0);
+        return view('admin.category_add',['datalist' => $datalist]);
+    }
+
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -82,11 +109,12 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        DB::table('categories')->where('id', '=', $id)->delete();
+        return redirect()->route('admin_category');
     }
 }
