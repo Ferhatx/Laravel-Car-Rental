@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -86,24 +87,36 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $data=Category::find($id);
+        $datalist = DB::table( 'categories')->get()->where('parent_id',0);
+        return view('admin.category_edit',['data' => $data,'datalist'=>$datalist]);
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        /*burada model yapısına göre Update işlemi yaptık eğer istemeseydik add ki insert  yerine upda te yazıp benzer şekilde yapabiliridik*/
+        $data=Category::find($id);
+            $data->parent_id = $request->input('parent_id');
+            $data-> title = $request->input('title');
+            $data->keywords = $request->input('keywords');
+            $data->description = $request->input('description');
+            $data->slug = $request->input('slug');
+            $data->status = $request->input('status');
+         $data->save();
+        return redirect()->route('admin_category');
     }
 
     /**

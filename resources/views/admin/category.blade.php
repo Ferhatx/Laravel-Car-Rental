@@ -39,7 +39,7 @@
                             <td>{{$rs->parent_id}}</td>
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->status}}</td>
-                            <td>Düzenle</td>
+                            <td><a href="{{route('admin_category_edit',['id'=>$rs->id])}}">Düzenle</a> </td>
                             <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')">Sil</a> </td>
                         </tr>
                         @endforeach
