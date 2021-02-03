@@ -19,8 +19,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('admin_category')}}">Kategori1</a>
-                <a class="collapse-item" href="#">Kategori2</a>
+                <a class="collapse-item" href="{{route('admin_category')}}">Kategoriler</a>
+                <a class="collapse-item" href="{{route('admin_cars')}}">Yeni Araç</a>
             </div>
         </div>
     </li>
