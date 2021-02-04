@@ -10,12 +10,12 @@
     <h1 class="h3 mb-4 text-gray-800">Araç Güncelle</h1>
     <div class="card shadow mb-4">
         <div class="card-body">
-            <form class="user" action="{{route('admin_car_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+            <form class="user" action="{{route('admin_car_update',['id'=>$data->id])}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
             <div class="form-group">
                 <label>Category</label>
-                <select name="parent_id" class="form-control">
+                <select name="category_id" class="form-control">
                     @foreach($datalist as $rs)<!-- burada otomatik olarak istediğimiz parent id geldi seçili -->
                     <option value="{{$rs->id}}" @if($rs->id==$data->category_id) selected="selected"@endif>{{$rs->title}}</option>
                     @endforeach
@@ -96,9 +96,11 @@
             <div class="form-group">
                 <label>Resim</label>
                 <input type="file" name="image" value="{{$data->image}}"  class="form-control">
-                @if($rs->image)
-                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" height="30px" width="30px"/>
-                @endif
+               <label>
+                   @if($data->image)
+                        <img src="{{Storage::url($data->image)}}" height="30px" width="30px"/>
+                    @endif
+                </label>
             </div>
             <button class="btn btn-primary" type="submit">Araç Güncelle</button>
             </form>

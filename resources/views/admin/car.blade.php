@@ -24,7 +24,6 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Category</th>
                             <th>Title</th>
                             <th>Model</th>
                             <th>Ücret</th>
@@ -38,7 +37,6 @@
                         <tr>
 
                             <td>{{$rs->id}}</td>
-                            <td>{{$rs->category_id}}</td>
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->modeli}}</td>
                             <td>{{$rs->price}} ₺</td>

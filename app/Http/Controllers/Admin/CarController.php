@@ -63,7 +63,9 @@ class CarController extends Controller
             $data->klima = $request->input('klima');
             $data->slug = $request->input('slug');
             $data->status = $request->input('status');
-            $data->image=Storage::putFile('images',$request->file('image'));
+             if($request->file('image') != null) {
+                     $data->image = Storage::putFile('images', $request->file('image'));
+            }
         $data->save();
         return redirect()->route('admin_cars');
      /*
@@ -173,7 +175,10 @@ class CarController extends Controller
         $data->klima = $request->input('klima');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
-        $data->image=Storage::putFile('images',$request->file('image'));
+         //if($request->file('image') != $data->image && $request->file('image') ==null ) {
+        if($request->hasfile('image')){
+            $data->image = Storage::putFile('images', $request->file('image'));
+            }
         $data->save();
         return redirect()->route('admin_cars');
 
