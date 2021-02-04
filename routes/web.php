@@ -20,7 +20,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::post('category/update/{id}',[App\Http\Controllers\Admin\CategoryController::class,'update'])->name('admin_category_update');
     Route::get('category/delete/{id}',[App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_delete');
     Route::get('category/show',[App\Http\Controllers\Admin\CategoryController::class,'show'])->name('admin_category_show');
-});
+
 
 
 //ARABA VERİLERİNİ EKLEDİĞİM YER
@@ -35,7 +35,24 @@ Route::prefix('car')->group(function (){
 });
 
 
+//İMAGE EKLEDİĞİM YER
+Route::prefix('image')->group(function (){
+    Route::get('create',[App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_add');
+    Route::post('store',[App\Http\Controllers\Admin\ImageController::class,'store'])->name('admin_image_store');
+    Route::get('delete/{id}',[App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_delete');
+    Route::get('show',[App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
+});
 
+    Route::get('setting',[App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
+    Route::post('setting/update',[App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
+
+
+
+
+
+
+
+});
 
 Route::get('/home2', function () {
     return view('welcome');
