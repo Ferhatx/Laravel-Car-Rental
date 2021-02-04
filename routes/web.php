@@ -24,7 +24,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 
 //ARABA VERİLERİNİ EKLEDİĞİM YER
-Route::middleware('auth')->prefix('car')->group(function (){
+Route::prefix('car')->group(function (){
     Route::get('/',[App\Http\Controllers\Admin\CarController::class,'index'])->name('admin_cars');
     Route::get('create',[App\Http\Controllers\Admin\CarController::class,'create'])->name('admin_car_add');
     Route::post('store',[App\Http\Controllers\Admin\CarController::class,'store'])->name('admin_car_store');

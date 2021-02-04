@@ -30,8 +30,7 @@
                             <th>Ücret</th>
                             <th>Resim</th>
                             <th>Status</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -43,10 +42,16 @@
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->modeli}}</td>
                             <td>{{$rs->price}} ₺</td>
-                            <td>{{$rs->image}}</td>
+                            <td>
+                                @if($rs->image)
+                                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" height="30px" width="30px"/>
+                                @endif
+                            </td>
                             <td>{{$rs->status}}</td>
-                            <td><a href="{{route('admin_car_edit',['id'=>$rs->id])}}">Düzenle</a> </td>
-                            <td><a href="{{route('admin_car_delete',['id'=>$rs->id])}}" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')">Sil</a> </td>
+                            <td>
+                            <a title="Düzenle" href="{{route('admin_car_edit',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>
+                                <a title="Sil" href="{{route('admin_car_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fa fa-times"></i></a>
+                            </td>
                         </tr>
                         @endforeach
                         </tbody>

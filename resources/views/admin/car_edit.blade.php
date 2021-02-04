@@ -10,7 +10,7 @@
     <h1 class="h3 mb-4 text-gray-800">Araç Güncelle</h1>
     <div class="card shadow mb-4">
         <div class="card-body">
-            <form class="user" action="{{route('admin_car_update',['id'=>$data->id])}}" method="post">
+            <form class="user" action="{{route('admin_car_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                 @csrf
 
             <div class="form-group">
@@ -94,7 +94,11 @@
                     </select>
                 </div>
             <div class="form-group">
-                <label>İMAGE SONRADAN EKLE</label>
+                <label>Resim</label>
+                <input type="file" name="image" value="{{$data->image}}"  class="form-control">
+                @if($rs->image)
+                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" height="30px" width="30px"/>
+                @endif
             </div>
             <button class="btn btn-primary" type="submit">Araç Güncelle</button>
             </form>

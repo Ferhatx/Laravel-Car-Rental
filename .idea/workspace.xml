@@ -19,15 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Category Edit Düzenleme İşlemleri">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_02_193634_create_cars_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/car.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/car_edit.blade.php" afterDir="false" />
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Araçlar  Edit, Düzenleme ve Silme İşlemleri">
+      <change afterPath="$PROJECT_DIR$/public/uploads/carimage/1612436371.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/arackiralama.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/arackiralama.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +219,11 @@
       <workItem from="1612046211697" duration="2276000" />
       <workItem from="1612129245610" duration="12242000" />
       <workItem from="1612193649687" duration="5250000" />
-      <workItem from="1612216867830" duration="25543000" />
+      <workItem from="1612216867830" duration="32800000" />
+      <workItem from="1612388575848" duration="6430000" />
+      <workItem from="1612396855338" duration="1424000" />
+      <workItem from="1612428988000" duration="8125000" />
+      <workItem from="1612449715878" duration="4113000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -277,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612206610337</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Araçlar  Edit, Düzenleme ve Silme İşlemleri">
+      <created>1612364900492</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612364900492</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +316,8 @@
     <MESSAGE value="Category Database İşlemleri" />
     <MESSAGE value="Category Ekleme ve Silme İşlemleri" />
     <MESSAGE value="Category Edit Düzenleme İşlemleri" />
-    <option name="LAST_COMMIT_MESSAGE" value="Category Edit Düzenleme İşlemleri" />
+    <MESSAGE value="Araçlar  Edit, Düzenleme ve Silme İşlemleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="Araçlar  Edit, Düzenleme ve Silme İşlemleri" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -336,10 +348,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1610291565059" />
-    <state x="471" y="87" key="NewPhpClassDialog" timestamp="1612047552609">
+    <state x="471" y="87" key="NewPhpClassDialog" timestamp="1612377577452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="471" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1612047552609" />
+    <state x="471" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1612377577452" />
     <state x="746" y="279" key="NewPhpFileDialog" timestamp="1612047578963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -352,10 +364,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612206620670">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612364918961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612206620670" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612364918961" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

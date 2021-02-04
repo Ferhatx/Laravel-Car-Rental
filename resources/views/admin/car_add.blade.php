@@ -10,7 +10,7 @@
     <h1 class="h3 mb-4 text-gray-800">Araç Ekle</h1>
     <div class="card shadow mb-4">
         <div class="card-body">
-            <form class="user" action="{{route('admin_car_store')}}" method="post">
+            <form class="user" action="{{route('admin_car_store')}}" method="post" enctype="multipart/form-data">
                 @csrf
             <div class="form-group">
                 <label>Category</label>
@@ -84,7 +84,8 @@
                     </select>
                 </div>
             <div class="form-group">
-                <label>İMAGE SONRADAN EKLE</label>
+                <label>Resim</label>
+                <input type="file" name="image"  class="form-control">
             </div>
             <button class="btn btn-primary" type="submit">Araç Ekle</button>
             </form>

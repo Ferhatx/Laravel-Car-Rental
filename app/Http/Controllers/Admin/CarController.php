@@ -7,7 +7,10 @@ use App\Models\Car;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
+use Illuminate\Support\Str;
+use Illuminate\Http\UploadedFile;
 class CarController extends Controller
 {
     /**
@@ -17,7 +20,10 @@ class CarController extends Controller
      */
     public function index()
     {
-        $datalist = DB::select('select * from cars');
+        $datalist = DB::table('cars')->get();
+        //$datalist =  Car::all();
+       // print_r($datalist);
+        //exit();
 
         return view('admin.car', ['datalist' => $datalist]);
     }
@@ -43,8 +49,40 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
+            $data = new Car;
+            $data->title = $request->input('title');
+            $data->keywords = $request->input('keywords');
+            $data->description = $request->input('description');
+            $data->category_id = $request->input('category_id');
+            $data->sub_category_id = $request->input('sub_category_id');
+            $data->user_id = Auth::id();
+            $data->modeli = $request->input('modeli');
+            $data->price = $request->input('price');
+            $data->vites = $request->input('vites');
+            $data->yakit = $request->input('yakit');
+            $data->klima = $request->input('klima');
+            $data->slug = $request->input('slug');
+            $data->status = $request->input('status');
+            $data->image=Storage::putFile('images',$request->file('image'));
+        $data->save();
+        return redirect()->route('admin_cars');
+     /*
 
-        DB::table('cars')->insert([
+             if($request->hasfile('image')){
+            $imageName = time().'.'.$request->image->extension();
+            //$imageName=Str::slug($request->title).'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('uploads/carimage'),$imageName);
+            $data->image='uploads/'.$imageName;
+            }
+
+
+
+
+
+
+
+
+      DB::table('cars')->insert([
             'title' => $request->input('title'),
             'keywords' => $request->input('keywords'),
             'description' => $request->input('description'),
@@ -57,9 +95,12 @@ class CarController extends Controller
             'klima' => $request->input('klima'),
             'user_id'=>Auth::id(),
             'slug' => $request->input('slug'),
-            'status' => $request->input('status')
-        ]);
-        return redirect()->route('admin_cars');
+            'status' => $request->input('status'),
+            if($request->file('image') != null){
+            'image'=>Storage::putFile('images',$request->file('image')),
+            }
+        ]);*/
+
 
 
 
@@ -132,6 +173,7 @@ class CarController extends Controller
         $data->klima = $request->input('klima');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
+        $data->image=Storage::putFile('images',$request->file('image'));
         $data->save();
         return redirect()->route('admin_cars');
 
