@@ -1,9 +1,12 @@
+@php
+$settings=\App\Http\Controllers\HomeController::getSetting();
+@endphp
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="inner-content">
-                    <p>Copyright © 2020 Desıgned by<a href="#">FERHAT AKTÜRK</a></p>
+                    <p>Copyright © Company <a href="{{route('anasayfa')}}">{{$settings->company}} </a>. 2021 Desıgned by FERHAT AKTÜRK</p>
                 </div>
             </div>
         </div>

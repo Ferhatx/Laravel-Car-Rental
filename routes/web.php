@@ -46,12 +46,6 @@ Route::prefix('image')->group(function (){
     Route::get('setting',[App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
 
-
-
-
-
-
-
 });
 
 Route::get('/home2', function () {
@@ -63,19 +57,24 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-
+/*
 //Bu işlem ile route gitmeden sayfaya ulaşıyorum.
 Route::get('/', function () {
     return view('home.index');
 });
-/////
 
+*/
 
-
-
-//Route::get('/anasayfa', [HomeController::class, 'index']); bu controller gidip alır
-
-Route::get('/hakkimizda',[HomeController::class,'hakkimizda']);
+// ANA MENÜLERİMİZ
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/anasayfa', [HomeController::class, 'index'])->name('anasayfa');
+Route::get('/hakkimizda',[HomeController::class,'hakkimizda'])->name('hakkimizda');
+Route::get('/vizyonumuz',[HomeController::class,'vizyonumuz'])->name('vizyonumuz');
+Route::get('/misyonumuz',[HomeController::class,'misyonumuz'])->name('misyonumuz');
+Route::get('/filo_kiralama',[HomeController::class,'filo_kiralama'])->name('filo_kiralama');
+Route::get('/kiralama_sozlesmesi',[HomeController::class,'kiralama_sozlesmesi'])->name('kiralama_sozlesmesi');
+Route::get('/kiralama_kosullari',[HomeController::class,'kiralama_kosullari'])->name('kiralama_kosullari');
+Route::get('/iletisim',[HomeController::class,'iletisim'])->name('iletisim');
 
 
 

@@ -1,12 +1,10 @@
-<!-- Stored in resources/views/child.blade.php -->
-
 @extends('layouts.home')
 
-@section('title', 'X Rent A Car')
+@section('title', $data->title)
 
 @section('description')
-    En Uygun Araçlar X Rent A Car'da.Güvenle Aracını Kullanın.Araçlarımız her kullanımdan sonra dezenfekte edilir.
+    {{$data->description}}
 @endsection
 @section('keywords')
-    araç,kiralama,rent a car,Türkiyede Araç Kiralama
+    {{$data->keywords}}
 @endsection
