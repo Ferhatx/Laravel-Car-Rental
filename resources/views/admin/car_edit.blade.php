@@ -17,7 +17,9 @@
                 <label>Category</label>
                 <select name="category_id" class="form-control">
                     @foreach($datalist as $rs)<!-- burada otomatik olarak istediğimiz parent id geldi seçili -->
-                    <option value="{{$rs->id}}" @if($rs->id==$data->category_id) selected="selected"@endif>{{$rs->title}}</option>
+                    <option value="{{$rs->id}}" @if($rs->id==$data->category_id) selected="selected"@endif>
+                        {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}
+                    </option>
                     @endforeach
                 </select>
             </div>

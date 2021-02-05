@@ -27,8 +27,7 @@
                             <th>Parent</th>
                             <th>Title</th>
                             <th>Status</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th colspan="2">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -36,11 +35,11 @@
                         <tr>
 
                             <td>{{$rs->id}}</td>
-                            <td>{{$rs->parent_id}}</td>
+                            <td>{{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}</td>
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->status}}</td>
-                            <td><a href="{{route('admin_category_edit',['id'=>$rs->id])}}">Düzenle</a> </td>
-                            <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')">Sil</a> </td>
+                            <td><a title="Düzenle" href="{{route('admin_category_edit',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a> </td>
+                            <td><a title="Sil" href="{{route('admin_category_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fa fa-times"></i></a> </td>
                         </tr>
                         @endforeach
                         </tbody>

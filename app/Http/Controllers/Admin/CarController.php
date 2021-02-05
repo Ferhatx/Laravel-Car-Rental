@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Car;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -20,8 +21,8 @@ class CarController extends Controller
      */
     public function index()
     {
-        $datalist = DB::table('cars')->get();
-        //$datalist =  Car::all();
+       // $datalist = DB::table('cars')->get();
+        $datalist=Car::all();
        // print_r($datalist);
         //exit();
 
@@ -146,6 +147,7 @@ class CarController extends Controller
     public function edit(Car $car,$id)
     {
         $data=Car::find($id);
+        //$datalist=Category::with('children')->get();
         $datalist = DB::table( 'categories')->get()->where('parent_id',0);
         $datalist2 = DB::table( 'categories')->get()->where('parent_id','<>',0);
         return view('admin.car_edit',['data'=>$data,'datalist2' => $datalist2,'datalist'=>$datalist]);

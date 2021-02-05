@@ -1,3 +1,6 @@
+@php
+    $parentCategories=\App\Http\Controllers\HomeController::categorylist()
+@endphp
 <!-- ***** Preloader Start ***** -->
 <div id="preloader">
     <div class="jumper">
@@ -28,13 +31,12 @@
                     <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Filomuz</a>
 
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Blog</a>
-                            <a class="dropdown-item" href="#">Team</a>
-                            <a class="dropdown-item" href="#">Testimonials</a>
-                            <a class="dropdown-item" href="#">Terms</a>
+                            @foreach($parentCategories as $rs)
+                            <a class="dropdown-item" href="#">{{$rs->title}}</a>
+                            @endforeach
                         </div>
                     </li>
 

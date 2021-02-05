@@ -16,8 +16,10 @@
                 <label>Parents</label>
                 <select name="parent_id" class="form-control">
                     @foreach($datalist as $rs)<!-- burada otomatik olarak istediğimiz parent id geldi seçili -->
-                    <option value="{{$rs->id}}" @if($rs->id==$data->parent_id) selected="selected"@endif>{{$rs->title}}</option>
-                    @endforeach
+
+                        <option value="{{$rs->id}}" @if($rs->id==$data->parent_id) selected="selected"@endif>
+                        {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}</option>
+                        @endforeach
                 </select>
             </div>
             <div class="form-group">
