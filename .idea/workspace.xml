@@ -19,14 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Laravel User Profile Page oluşturma Jetstream sayfasını panele alma">
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Laravel User Profile Photo Ek Alanlar Ekleme Guncelleme">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_07_104447_create_pages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_07_105120_page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/page_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/kiralama_kosullari.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/kiralama_sozlesmesi.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/misyonumuz.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/sikca_sorulan_sorular.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/vizyonumuz.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_scroll.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_scroll.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/hakkimizda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hakkimizda.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,15 +196,15 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\arackiralama\resources\views\layouts" />
       <recent name="C:\Php\arackiralama\resources\views\home" />
+      <recent name="C:\Php\arackiralama\resources\views\layouts" />
       <recent name="C:\Php\arackiralama\resources\views\admin" />
     </key>
   </component>
@@ -233,7 +245,7 @@
       <workItem from="1612449715878" duration="30154000" />
       <workItem from="1612516080436" duration="12297000" />
       <workItem from="1612647655258" duration="9156000" />
-      <workItem from="1612681849771" duration="6246000" />
+      <workItem from="1612681849771" duration="26678000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -340,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612683318251</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Laravel User Profile Photo Ek Alanlar Ekleme Guncelleme">
+      <created>1612691025634</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1612691025634</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +399,8 @@
     <MESSAGE value="Category Tree Sub Category Gösterimi ve Fonksiyon Tanımı" />
     <MESSAGE value="Laravel Home Page Setting Meta tags data User ve sayfa linkleri" />
     <MESSAGE value="Laravel User Profile Page oluşturma Jetstream sayfasını panele alma" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laravel User Profile Page oluşturma Jetstream sayfasını panele alma" />
+    <MESSAGE value="Laravel User Profile Photo Ek Alanlar Ekleme Guncelleme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laravel User Profile Photo Ek Alanlar Ekleme Guncelleme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -399,10 +419,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612294433270" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612463900052">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612695571742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612463900052" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612695571742" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1612467929117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -419,10 +439,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="471" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1612377577452" />
-    <state x="746" y="279" key="NewPhpFileDialog" timestamp="1612650117858">
+    <state x="746" y="279" key="NewPhpFileDialog" timestamp="1612696291875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="746" y="279" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1612650117858" />
+    <state x="746" y="279" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1612696291875" />
     <state x="528" y="66" key="RollbackChangesDialog" timestamp="1608850238738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -431,10 +451,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612683344789">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612691037855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612683344789" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612691037855" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -451,9 +471,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610233700003" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609203786526">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1612711476579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609203786526" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1612711476579" />
   </component>
 </project>

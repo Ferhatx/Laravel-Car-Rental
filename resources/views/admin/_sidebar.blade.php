@@ -25,21 +25,16 @@
         </div>
     </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
+
+    <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-           aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" href="{{route('admin_page')}}">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Sayfalar</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item" href="#">Hakkımızda</a>
-				<a class="collapse-item" href="#">Vizyonumuz</a>
-				<a class="collapse-item" href="#">Misyonumuz</a>
-            </div>
-        </div>
+            <span>Sayfalar</span></a>
     </li>
+
+
+
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">

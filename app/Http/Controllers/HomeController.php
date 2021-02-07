@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Page;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,15 +17,19 @@ class HomeController extends Controller
         return   Setting::first();
     }
 
+    public static function getPage(){
+        return   Page::first();
+    }
+
     public function index(){
 
        // $data = DB::table( 'settings')->get()->where('id',1);
          $data=Setting::first();
-        return view('home.index',['data'=>$data,'page'=>'anasayfa']);
+        return view('home.index',['data'=>$data]);
     }
 
-
     public function hakkimizda(){
+
         return view('home.hakkimizda');
     }
 
@@ -33,6 +38,7 @@ class HomeController extends Controller
     }
 
     public function misyonumuz(){
+        $misyonumuz=Page::first();
         return view('home.misyonumuz');
     }
     public function filo_kiralama(){
@@ -44,6 +50,9 @@ class HomeController extends Controller
     }
     public function kiralama_kosullari(){
         return view('home.kiralama_kosullari');
+    }
+    public function sikca_sorulan_sorular(){
+        return view('home.sikca_sorulan_sorular');
     }
     public function iletisim(){
         return view('home.iletisim');

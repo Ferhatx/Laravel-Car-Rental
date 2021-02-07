@@ -60,7 +60,7 @@
 
                             <a class="dropdown-item" href="{{route('kiralama_sozlesmesi')}}">Kira Sözleşmesi</a>
                             <a class="dropdown-item" href={{route('kiralama_kosullari')}}>Kiralama Koşulları</a>
-                            <a class="dropdown-item" href={{route('kiralama_kosullari')}}>Sıkça Sorulan Sorular</a>
+                            <a class="dropdown-item" href={{route('sikca_sorulan_sorular')}}>Sıkça Sorulan Sorular</a>
 
                         </div>
                     </li>

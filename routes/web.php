@@ -43,11 +43,24 @@ Route::prefix('image')->group(function (){
     Route::get('delete/{id}',[App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_delete');
     Route::get('show',[App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
 });
-
+//SETTİNG
     Route::get('setting',[App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
 
+//PAGE EKLEDİĞİM
+    Route::get('page',[App\Http\Controllers\Admin\PageController::class,'index'])->name('admin_page');
+    Route::post('page/update',[App\Http\Controllers\Admin\PageController::class,'update'])->name('admin_page_update');
+
+
 });
+
+
+
+
+
+
+
+
 
 Route::get('/home2', function () {
     return view('welcome');
@@ -65,6 +78,10 @@ Route::get('/', function () {
 });
 
 */
+
+
+
+
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
 
@@ -94,6 +111,7 @@ Route::get('/misyonumuz',[HomeController::class,'misyonumuz'])->name('misyonumuz
 Route::get('/filo_kiralama',[HomeController::class,'filo_kiralama'])->name('filo_kiralama');
 Route::get('/kiralama_sozlesmesi',[HomeController::class,'kiralama_sozlesmesi'])->name('kiralama_sozlesmesi');
 Route::get('/kiralama_kosullari',[HomeController::class,'kiralama_kosullari'])->name('kiralama_kosullari');
+Route::get('/sikca_sorulan_sorular',[HomeController::class,'sikca_sorulan_sorular'])->name('sikca_sorulan_sorular');
 Route::get('/iletisim',[HomeController::class,'iletisim'])->name('iletisim');
 
 

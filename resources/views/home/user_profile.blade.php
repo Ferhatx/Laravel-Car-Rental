@@ -1,8 +1,4 @@
 @extends('layouts.home')
-
-
-
-
 @section("content")
 <!-- Page Content -->
 <div class="page-heading about-heading header-text" style="background-image: url({{asset('assets')}}/assets/images/heading-5-1920x500.jpg);">

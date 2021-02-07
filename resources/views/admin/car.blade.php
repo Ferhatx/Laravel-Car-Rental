@@ -50,7 +50,7 @@
                             <td>{{$rs->status}}</td>
                             <td>
                                 <a title="Düzenle" href="{{route('admin_car_edit',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a></td>
-                              <td><a title="Sil" href="{{route('admin_car_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fa fa-times"></i></a></td>
+                              <td><a title="Sil" href="{{route('admin_car_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fas fa-trash"></i></td>
                         </tr>
                         @endforeach
                         </tbody>
