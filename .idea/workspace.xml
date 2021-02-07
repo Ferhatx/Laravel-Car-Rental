@@ -19,19 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Laravel Home Page Setting Meta tags data User ve sayfa linkleri">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/appx.blade.php" afterDir="false" />
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Laravel User Profile Page oluşturma Jetstream sayfasını panele alma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/hakkimizda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hakkimizda.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +233,7 @@
       <workItem from="1612449715878" duration="30154000" />
       <workItem from="1612516080436" duration="12297000" />
       <workItem from="1612647655258" duration="9156000" />
-      <workItem from="1612681849771" duration="1117000" />
+      <workItem from="1612681849771" duration="6246000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -338,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612537778722</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Laravel User Profile Page oluşturma Jetstream sayfasını panele alma">
+      <created>1612683318251</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612683318251</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +379,8 @@
     <MESSAGE value="One to Many ilişkisi" />
     <MESSAGE value="Category Tree Sub Category Gösterimi ve Fonksiyon Tanımı" />
     <MESSAGE value="Laravel Home Page Setting Meta tags data User ve sayfa linkleri" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laravel Home Page Setting Meta tags data User ve sayfa linkleri" />
+    <MESSAGE value="Laravel User Profile Page oluşturma Jetstream sayfasını panele alma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laravel User Profile Page oluşturma Jetstream sayfasını panele alma" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -428,10 +431,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612537791445">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612683344789">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612537791445" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612683344789" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

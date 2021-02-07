@@ -87,8 +87,8 @@
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Giriş</a>
 
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Login</a>
-                                <a class="dropdown-item" href="#">Kayıt</a>
+                                <a class="dropdown-item" href="/login">Login</a>
+                                <a class="dropdown-item" href="/register">Kayıt</a>
 
                             </div>
                         </li>
