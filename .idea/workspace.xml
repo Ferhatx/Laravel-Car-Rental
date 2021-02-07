@@ -19,12 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Category Tree Sub Category Gösterimi ve Fonksiyon Tanımı">
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Laravel Home Page Setting Meta tags data User ve sayfa linkleri">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/appx.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/hakkimizda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hakkimizda.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,13 +189,15 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\arackiralama\resources\views\layouts" />
+      <recent name="C:\Php\arackiralama\resources\views\home" />
       <recent name="C:\Php\arackiralama\resources\views\admin" />
     </key>
   </component>
@@ -227,7 +236,9 @@
       <workItem from="1612396855338" duration="1424000" />
       <workItem from="1612428988000" duration="8125000" />
       <workItem from="1612449715878" duration="30154000" />
-      <workItem from="1612516080436" duration="12099000" />
+      <workItem from="1612516080436" duration="12297000" />
+      <workItem from="1612647655258" duration="9156000" />
+      <workItem from="1612681849771" duration="1117000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -320,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612484146376</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Laravel Home Page Setting Meta tags data User ve sayfa linkleri">
+      <created>1612537778722</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612537778722</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +376,8 @@
     <MESSAGE value="Araba Resimlerini ekleme ve Düzenleme" />
     <MESSAGE value="One to Many ilişkisi" />
     <MESSAGE value="Category Tree Sub Category Gösterimi ve Fonksiyon Tanımı" />
-    <option name="LAST_COMMIT_MESSAGE" value="Category Tree Sub Category Gösterimi ve Fonksiyon Tanımı" />
+    <MESSAGE value="Laravel Home Page Setting Meta tags data User ve sayfa linkleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laravel Home Page Setting Meta tags data User ve sayfa linkleri" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -397,10 +416,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="471" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1612377577452" />
-    <state x="746" y="279" key="NewPhpFileDialog" timestamp="1612047578963">
+    <state x="746" y="279" key="NewPhpFileDialog" timestamp="1612650117858">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="746" y="279" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1612047578963" />
+    <state x="746" y="279" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1612650117858" />
     <state x="528" y="66" key="RollbackChangesDialog" timestamp="1608850238738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -409,10 +428,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612484153449">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612537791445">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612484153449" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612537791445" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

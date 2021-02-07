@@ -25,11 +25,8 @@
 
 <body>
 @include('home._header');
-@include('home._slider');
-@include('home._offers');
-@include('home._minabout');
-@include('home._comments');
-@include('home._mincontact');
+@yield("content")
+
 @include('home._footer');
 </body>
 </html>

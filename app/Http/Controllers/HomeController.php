@@ -20,8 +20,9 @@ class HomeController extends Controller
 
        // $data = DB::table( 'settings')->get()->where('id',1);
          $data=Setting::first();
-        return view('home.index',['data'=>$data]);
+        return view('home.index',['data'=>$data,'page'=>'anasayfa']);
     }
+
 
     public function hakkimizda(){
         return view('home.hakkimizda');

@@ -60,6 +60,7 @@
 
                             <a class="dropdown-item" href="{{route('kiralama_sozlesmesi')}}">Kira Sözleşmesi</a>
                             <a class="dropdown-item" href={{route('kiralama_kosullari')}}>Kiralama Koşulları</a>
+                            <a class="dropdown-item" href={{route('kiralama_kosullari')}}>Sıkça Sorulan Sorular</a>
 
                         </div>
                     </li>
@@ -73,8 +74,10 @@
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
 
                         <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{route('myprofile')}}">Profilim</a>
                             <a class="dropdown-item" href="#">Sepet</a>
-                            <a class="dropdown-item" href="#">Çıkış</a>
+                            <a class="dropdown-item" href="#">Mesajlar</a>
+                            <a class="dropdown-item" href="{{route('logout')}}">Çıkış</a>
 
                         </div>
                         </li>

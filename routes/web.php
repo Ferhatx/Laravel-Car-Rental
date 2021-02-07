@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin',[App\Http\Controllers\Admin\HomeController::class,'index'])->name('adminhome')->middleware('auth');
 Route::get('/admin/login',[App\Http\Controllers\Admin\HomeController::class,'login'])->name('admin_login');
 Route::post('/admin/logincheck',[App\Http\Controllers\Admin\HomeController::class,'logincheck'])->name('admin_logincheck');
-Route::get('/admin/logout',[App\Http\Controllers\Admin\HomeController::class,'logout'])->name('admin_logout');
+//Route::get('/admin/logout',[App\Http\Controllers\Admin\HomeController::class,'logout'])->name('admin_logout');
+Route::get('/logout',[App\Http\Controllers\Admin\HomeController::class,'logout'])->name('logout');
 
 
 //CATEGORY
@@ -64,6 +65,14 @@ Route::get('/', function () {
 });
 
 */
+
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
+
+    Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('myprofile');
+
+});
+
+
 
 // ANA MENÜLERİMİZ
 Route::get('/', [HomeController::class, 'index']);

@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Page Title</title>
-</head>
-<body>
+@extends('layouts.home')
 
-<h1>Hakkımızda</h1>
+@section("content")
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url({{asset('assets')}}/assets/images/heading-5-1920x500.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-content">
+                        <h2></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-</body>
-</html>
+    <div class="team-members">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        @include('profile.show')
+                    </div>
+                </div>
+            </div>
+        </div>
+@endsection
