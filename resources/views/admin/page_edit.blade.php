@@ -13,37 +13,44 @@
         $(document).ready(function() {
             $('#hakkimizda_editor').summernote(
                 {
-                    height: 150,   //set editable area's height
+                    height: 300,   //set editable area's height
                     codemirror: { // codemirror options
                         theme: 'monokai'
                     }
                 });
             $('#vizyon_editor').summernote({
-                height: 150,   //set editable area's height
+                height: 300,   //set editable area's height
                 codemirror: { // codemirror options
                     theme: 'monokai'
                 }
             });
             $('#misyon_editor').summernote({
-                height: 150,   //set editable area's height
+                height: 300,   //set editable area's height
                 codemirror: { // codemirror options
                     theme: 'monokai'
                 }
             });
             $('#kirasoz_editor').summernote({
-                height: 150,   //set editable area's height
+                height: 300,   //set editable area's height
                 codemirror: { // codemirror options
                     theme: 'monokai'
                 }
             });
             $('#kiralama_editor').summernote({
-                height: 150,   //set editable area's height
+                height: 300,   //set editable area's height
                 codemirror: { // codemirror options
                     theme: 'monokai'
                 }
             });
             $('#sss_editor').summernote({
-                height: 150,   //set editable area's height
+                height: 300,   //set editable area's height
+                codemirror: { // codemirror options
+                    theme: 'monokai'
+                }
+            });
+
+            $('#iletisim_editor').summernote({
+                height: 300,   //set editable area's height
                 codemirror: { // codemirror options
                     theme: 'monokai'
                 }
@@ -62,7 +69,8 @@
                 <li class="nav-item"><a class="nav-link" id="miyonumuz" href="#Misyonumuz" data-toggle="tab" role="tab" aria-controls="example" aria-selected="false">Misyonumuz</a></li>
                 <li class="nav-item"><a class="nav-link" id="kira-sozlesmesi" href="#kira-Sozlesmesi" data-toggle="tab" role="tab" aria-controls="example" aria-selected="false">Kira Sözleşmesi</a></li>
                 <li class="nav-item"><a class="nav-link" id="kiralama-kosullari" href="#kiralama-Kosullari" data-toggle="tab" role="tab" aria-controls="example" aria-selected="false">Kiralama Koşulları</a></li>
-                <li class="nav-item"><a class="nav-link" id="sikca_sorular" href="#sikca_Sorular" data-toggle="tab" role="tab" aria-controls="example" aria-selected="false">S.S.S</a></li>
+                <!--<li class="nav-item"><a class="nav-link" id="sikca_sorular" href="#sikca_Sorular" data-toggle="tab" role="tab" aria-controls="example" aria-selected="false">S.S.S</a></li>-->
+                <li class="nav-item"><a class="nav-link" id="iletisim" href="#Iletisim" data-toggle="tab" role="tab" aria-controls="example" aria-selected="false">İletişim</a></li>
 
 
             </ul>
@@ -76,7 +84,7 @@
             <div class="tab-content" id="cardPillContent">
                 <div class="tab-pane fade show active" id="Hakkimizda" role="tabpanel" aria-labelledby="hakkimizda">
                    <h5 class="card-title">Hakkımızda Güncelle</h5>
-                    <textarea id="hakkimizda_editor" name="hakkimizda_icerik" rows="10" cols="80">{{$data->hakkimizda}}</textarea>
+                    <textarea id="hakkimizda_editor" name="hakkimizda_icerik" >{{$data->hakkimizda}}</textarea>
                 </div>
 
 
@@ -99,12 +107,16 @@
                     <h5 class="card-title">Kirama Koşulları  Güncelle</h5>
                     <textarea id="kiralama_editor" name="kiralama_kosullari_icerik">{{$data->kiralama_kosullari}}</textarea>
                 </div>
-
+<!--
                 <div class="tab-pane fade" id="sikca_Sorular" role="tabpanel" aria-labelledby="sikca_sorular">
-                    <h5 class="card-title">Sıkça Sorulan Soruları Günceller</h5>
+                    <h5 class="card-title">Sıkça Sorulan Soruları Güncelle</h5>
                     <textarea id="sss_editor" name="sikca_sorulan_sorular_icerik">{{$data->sikca_sorulan_sorular}}</textarea>
                 </div>
-
+-->
+                <div class="tab-pane fade" id="Iletisim" role="tabpanel" aria-labelledby="iletisim">
+                    <h5 class="card-title">İletişim Güncelle</h5>
+                    <textarea id="iletisim_editor" name="iletisim_icerik">{{$data->iletisim}}</textarea>
+                </div>
 
             </div>
                 <br/>

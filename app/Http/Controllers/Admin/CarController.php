@@ -22,10 +22,9 @@ class CarController extends Controller
     public function index()
     {
        // $datalist = DB::table('cars')->get();
-        $datalist=Car::all();
        // print_r($datalist);
         //exit();
-
+        $datalist=Car::all();
         return view('admin.car', ['datalist' => $datalist]);
     }
 

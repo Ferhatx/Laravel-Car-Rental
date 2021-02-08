@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Page;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        $data=Page::first();
-        return view('admin.page_edit', ['data' => $data]);
+        $datalist=Message::all();
+      return view('admin.message', ['datalist' => $datalist]);
     }
 
     /**
@@ -43,10 +43,10 @@ class PageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Page  $page
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function show(Page $page)
+    public function show(Message $message)
     {
         //
     }
@@ -54,11 +54,17 @@ class PageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Page  $page
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function edit(Page $page)
+    public function edit(Message $message,$id)
     {
+        $data=Message::find($id);
+        $data->status='Read';
+        $data->save();
+
+        return view('admin.message_edit',['data'=>$data]);
+
         //
     }
 
@@ -66,33 +72,27 @@ class PageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Page  $page
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Page $page)
+    public function update(Request $request, Message $message,$id)
     {
-        $id=$request->input('id');
-        $data=Page::find($id);
-        $data->hakkimizda=$request->input('hakkimizda_icerik');
-        $data->vizyonumuz=$request->input('vizyonumuz_icerik');
-        $data->misyonumuz=$request->input('misyonumuz_icerik');
-        $data->kira_sozlesmesi= $request->input('kira_sozlesmesi_icerik');
-        $data->kiralama_kosullari = $request->input('kiralama_kosullari_icerik');
-        $data->sikca_sorulan_sorular = $request->input('sikca_sorulan_sorular_icerik');
-        $data->iletisim = $request->input('iletisim_icerik');
+        $data=Message::find($id);
+        $data->note=$request->input('note_icerik');
         $data->save();
-        return redirect()->route('admin_page');
-
+        return back()->with('success','Mesaj Güncellendi.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Page  $page
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Page $page)
+    public function destroy(Message $message,$id)
     {
-        //
+        $data=Message::find($id);
+        $data->delete();
+        return redirect()->route('admin_message')->with('info','Mesajınız Silinmiştir.');
     }
 }

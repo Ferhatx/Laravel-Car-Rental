@@ -21,6 +21,7 @@ class CreatePagesTable extends Migration
             $table->text('kira_sozlesmesi')->nullable();
             $table->text('kiralama_kosullari')->nullable();
             $table->text('sikca_sorulan_sorular')->nullable();
+            $table->text('iletisim')->nullable();
             $table->string('status' , 5)->nullable()->default('False');
             $table->timestamps();
         });

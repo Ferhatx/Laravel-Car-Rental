@@ -30,7 +30,7 @@
                             <th>Ücret</th>
                             <th>Resim</th>
                             <th>Status</th>
-                            <th colspan="2">Actions</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -49,8 +49,8 @@
                             </td>
                             <td>{{$rs->status}}</td>
                             <td>
-                                <a title="Düzenle" href="{{route('admin_car_edit',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a></td>
-                              <td><a title="Sil" href="{{route('admin_car_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fas fa-trash"></i></td>
+                                <a title="Düzenle" href="{{route('admin_car_edit',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>
+                                <a title="Sil" href="{{route('admin_car_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fas fa-trash"></i></a></td>
                         </tr>
                         @endforeach
                         </tbody>

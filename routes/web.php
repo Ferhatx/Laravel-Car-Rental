@@ -35,6 +35,18 @@ Route::prefix('car')->group(function (){
     Route::get('show',[App\Http\Controllers\Admin\CarController::class,'show'])->name('admin_car_show');
 });
 
+//İLETİŞİM MESAJI
+    Route::prefix('message')->group(function (){
+        Route::get('/',[App\Http\Controllers\Admin\MessageController::class,'index'])->name('admin_message');
+        Route::get('edit/{id}',[App\Http\Controllers\Admin\MessageController::class,'edit'])->name('admin_message_edit');
+        Route::post('update/{id}',[App\Http\Controllers\Admin\MessageController::class,'update'])->name('admin_message_update');
+        Route::get('delete/{id}',[App\Http\Controllers\Admin\MessageController::class,'destroy'])->name('admin_message_delete');
+        Route::get('show',[App\Http\Controllers\Admin\MessageController::class,'show'])->name('admin_message_show');
+    });
+
+
+
+
 
 //İMAGE EKLEDİĞİM YER
 Route::prefix('image')->group(function (){
@@ -113,7 +125,7 @@ Route::get('/kiralama_sozlesmesi',[HomeController::class,'kiralama_sozlesmesi'])
 Route::get('/kiralama_kosullari',[HomeController::class,'kiralama_kosullari'])->name('kiralama_kosullari');
 Route::get('/sikca_sorulan_sorular',[HomeController::class,'sikca_sorulan_sorular'])->name('sikca_sorulan_sorular');
 Route::get('/iletisim',[HomeController::class,'iletisim'])->name('iletisim');
-
+Route::post('/sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
 
 
 
