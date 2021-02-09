@@ -45,6 +45,16 @@ Route::prefix('car')->group(function (){
     });
 
 
+//FAQ VERİLERİNİ EKLEDİĞİM YER
+    Route::prefix('faq')->group(function (){
+        Route::get('/',[App\Http\Controllers\Admin\FaqController::class,'index'])->name('admin_faq');
+        Route::get('create',[App\Http\Controllers\Admin\FaqController::class,'create'])->name('admin_faq_add');
+        Route::post('store',[App\Http\Controllers\Admin\FaqController::class,'store'])->name('admin_faq_store');
+        Route::get('edit/{id}',[App\Http\Controllers\Admin\FaqController::class,'edit'])->name('admin_faq_edit');
+        Route::post('update/{id}',[App\Http\Controllers\Admin\FaqController::class,'update'])->name('admin_faq_update');
+        Route::get('delete/{id}',[App\Http\Controllers\Admin\FaqController::class,'destroy'])->name('admin_faq_delete');
+        Route::get('show',[App\Http\Controllers\Admin\FaqController::class,'show'])->name('admin_faq_show');
+    });
 
 
 

@@ -17,7 +17,7 @@ $settings=\App\Http\Controllers\HomeController::getSetting();
 <script src="{{asset('assets')}}/vendor/jquery/jquery.min.js"></script>
 <script src="{{asset('assets')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-
+@yield('js1')
 <!-- Additional Scripts -->
 <script src="{{asset('assets')}}/assets/js/custom.js"></script>
 <script src="{{asset('assets')}}/assets/js/owl.js"></script>

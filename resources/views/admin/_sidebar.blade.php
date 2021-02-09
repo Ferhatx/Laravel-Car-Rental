@@ -39,14 +39,13 @@
             <i class="fas fa-envelope-open-text"></i>
             <span>İletişim Mesajları</span></a>
     </li>
-
-
-    <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Test</span></a>
+        <a class="nav-link" href="{{route('admin_faq')}}">
+            <i class="fas fa-envelope-open-text"></i>
+            <span>S.S.S</span></a>
     </li>
+
+
 
 
 

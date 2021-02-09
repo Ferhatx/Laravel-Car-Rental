@@ -19,26 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Hakkımızda,Vizyonumuz,Misyonumuz,Kira Sözleşmesi,Kiralama Koşulları,Sıkça Sorulan Sorular, User Profil Sayafları">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_07_210311_create_messages_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_07_211535_message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/message.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/message_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/message_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/iletisim.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/message.blade.php" afterDir="false" />
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Laravel Contact Mesajları ve Admin panelde yönetimi">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FaqController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Faq.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_08_234129_create_faqs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_08_234714_faq.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/faq.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/faq_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_07_104447_create_pages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_07_104447_create_pages_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/message_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/faq_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/sikca_sorulan_sorular.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/sikca_sorulan_sorular.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +241,8 @@
       <workItem from="1612647655258" duration="9156000" />
       <workItem from="1612681849771" duration="35380000" />
       <workItem from="1612743482679" duration="1833000" />
-      <workItem from="1612786847699" duration="21040000" />
+      <workItem from="1612786847699" duration="29522000" />
+      <workItem from="1612852850575" duration="1113000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -368,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612718272730</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Laravel Contact Mesajları ve Admin panelde yönetimi">
+      <created>1612826743832</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612826743832</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +413,8 @@
     <MESSAGE value="Laravel User Profile Photo Ek Alanlar Ekleme Guncelleme" />
     <MESSAGE value="Hakkımızda,Vizyonumuz,Misyonumuz,Kira Sözleşmesi,Kiralama Koşulları,Sıkça Sorulan Sorular Sayafları" />
     <MESSAGE value="Hakkımızda,Vizyonumuz,Misyonumuz,Kira Sözleşmesi,Kiralama Koşulları,Sıkça Sorulan Sorular, User Profil Sayafları" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hakkımızda,Vizyonumuz,Misyonumuz,Kira Sözleşmesi,Kiralama Koşulları,Sıkça Sorulan Sorular, User Profil Sayafları" />
+    <MESSAGE value="Laravel Contact Mesajları ve Admin panelde yönetimi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laravel Contact Mesajları ve Admin panelde yönetimi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -430,10 +433,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612294433270" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612815234200">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612833306915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612815234200" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612833306915" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1612467929117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -462,10 +465,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612718283949">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612826776047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612718283949" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612826776047" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -478,10 +481,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1009" height="614" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607283915833" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1610233700003">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1612853253272">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610233700003" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612853253272" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1612711476579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Page;
 use App\Models\Setting;
@@ -53,7 +54,8 @@ class HomeController extends Controller
         return view('home.kiralama_kosullari');
     }
     public function sikca_sorulan_sorular(){
-        return view('home.sikca_sorulan_sorular');
+        $datalist=Faq::all()->sortBy('position');
+        return view('home.sikca_sorulan_sorular',['datalist'=>$datalist]);
     }
     public function iletisim(){
         return view('home.iletisim');

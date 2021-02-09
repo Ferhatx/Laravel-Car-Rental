@@ -10,7 +10,7 @@
     <meta name="author" content="FERHAT AKTÜRK">
     <link rel="icon" href="{{asset('assets')}}/assets/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
+@yield('css1')
     <title> @yield('title') </title>
 
     <!-- Bootstrap core CSS -->
