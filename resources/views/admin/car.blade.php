@@ -14,6 +14,7 @@
         <div class="card shadow mb-4">
             <div class="card-body">
                 <div class="table-responsive">
+                    @include('home.message')
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <a href="{{route('admin_car_add')}}" class="btn btn-success btn-icon-split" style="margin-left:350px; ">
                                         <span class="icon text-white-50">
@@ -25,10 +26,11 @@
                         <tr>
                             <th>Id</th>
                             <th>Category ID</th>
-                            <th>Title</th>
+
                             <th>Model</th>
                             <th>Ücret</th>
                             <th>Resim</th>
+                            <th>Resim Galerisi</th>
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
@@ -38,7 +40,7 @@
                         <tr>
 
                             <td>{{$rs->id}}</td>
-                            <td>{{$rs->category->title}}</td>
+
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->modeli}}</td>
                             <td>{{$rs->price}} ₺</td>
@@ -47,6 +49,7 @@
                                     <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" height="30px" width="30px"/>
                                 @endif
                             </td>
+                            <td><a title="Galeri" href="{{route('admin_image_add',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="far fa-images"></i></a></td>
                             <td>{{$rs->status}}</td>
                             <td>
                                 <a title="Düzenle" href="{{route('admin_car_edit',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>

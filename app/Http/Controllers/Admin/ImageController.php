@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Car;
 use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,9 +28,10 @@ class ImageController extends Controller
      */
     public function create($id)
     {
-        $datalist = DB::table( 'categories')->get()->where('parent_id',0);
-        $datalist2 = DB::table( 'categories')->get()->where('parent_id','<>',0);
-        return view('admin.image_add',['datalist2' => $datalist2,'datalist'=>$datalist]);
+       $data=Car::find($id);
+       $datalist = DB::table( 'images')->get()->where('araba_id','=',$id);
+        //$datalist2 = DB::table( 'categories')->get()->where('parent_id','<>',0);
+        return view('admin.image_add',['data'=>$data,'datalist'=>$datalist]);
     }
 
     /**
@@ -43,10 +45,12 @@ class ImageController extends Controller
         $data = new Image;
         $data->title = $request->input('title');
         $data->category_id = $request->input('category_id');
-        $data->sub_category_id = $request->input('sub_category_id');
+        $data->sub_category_id =$request->input('sub_category_id');
+        $data->category_title =$request->input('category_title');
+        $data->araba_id =$id;
         $data->image=Storage::putFile('images',$request->file('image'));
         $data->save();
-        return redirect()->route('admin_image_add');
+        return redirect()->route('admin_image_add',['id'=>$id]);
     }
 
     /**
@@ -89,8 +93,10 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy(Image $image,$id)
     {
-        //
+        $data=Image::find($id);
+        $data->delete();
+        return redirect()->route('admin_cars')->with('info','Resminiz Silinmiştir.');
     }
 }

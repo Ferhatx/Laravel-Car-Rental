@@ -17,7 +17,7 @@
                 <select name="category_id" class="form-control">
                     <option>Main Kategotinizi Seçiniz</option>
                     @foreach($datalist as $rs)
-                    <option value="{{$rs->id}}">{{$rs->title}}</option>
+                    <option value="{{$rs->title}}">{{$rs->title}}</option>
                     @endforeach
                 </select>
             </div>
@@ -26,7 +26,7 @@
                     <select name="sub_category_id" class="form-control">
                         <option>Alt Kategotinizi Seçiniz</option>
                         @foreach($datalist2 as $rs2)
-                            <option value="{{$rs2->id}}">{{$rs2->title}}</option>
+                            <option value="{{$rs2->title}}">{{$rs2->title}}</option>
                         @endforeach
                     </select>
                 </div>
