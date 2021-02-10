@@ -41,8 +41,14 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{route('admin_faq')}}">
-            <i class="fas fa-envelope-open-text"></i>
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
             <span>S.S.S</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('admin_reservation')}}">
+            <i class="far fa-calendar-check"></i>
+            <span>Rezervasyonlar</span></a>
     </li>
 
 

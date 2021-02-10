@@ -58,6 +58,30 @@ Route::prefix('car')->group(function (){
 
 
 
+    //İLETİŞİM MESAJI
+    Route::prefix('message')->group(function (){
+        Route::get('/',[App\Http\Controllers\Admin\MessageController::class,'index'])->name('admin_message');
+        Route::get('edit/{id}',[App\Http\Controllers\Admin\MessageController::class,'edit'])->name('admin_message_edit');
+        Route::post('update/{id}',[App\Http\Controllers\Admin\MessageController::class,'update'])->name('admin_message_update');
+        Route::get('delete/{id}',[App\Http\Controllers\Admin\MessageController::class,'destroy'])->name('admin_message_delete');
+        Route::get('show',[App\Http\Controllers\Admin\MessageController::class,'show'])->name('admin_message_show');
+    });
+
+
+
+    //İLETİŞİM MESAJI
+    Route::prefix('reservation')->group(function (){
+        Route::get('/',[App\Http\Controllers\Admin\ReservationController::class,'index'])->name('admin_reservation');
+        Route::get('edit/{id}',[App\Http\Controllers\Admin\ReservationController::class,'edit'])->name('admin_reservation_edit');
+        Route::post('update/{id}',[App\Http\Controllers\Admin\ReservationController::class,'update'])->name('admin_reservation_update');
+        Route::get('delete/{id}',[App\Http\Controllers\Admin\ReservationController::class,'destroy'])->name('admin_reservation_delete');
+        Route::get('show',[App\Http\Controllers\Admin\ReservationController::class,'show'])->name('admin_reservation_show');
+    });
+
+
+
+
+
 //İMAGE EKLEDİĞİM YER
 Route::prefix('image')->group(function (){
     Route::get('create/{id}',[App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_add');
@@ -136,6 +160,12 @@ Route::get('/kiralama_kosullari',[HomeController::class,'kiralama_kosullari'])->
 Route::get('/sikca_sorulan_sorular',[HomeController::class,'sikca_sorulan_sorular'])->name('sikca_sorulan_sorular');
 Route::get('/iletisim',[HomeController::class,'iletisim'])->name('iletisim');
 Route::post('/sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
-
-
-
+Route::get('/ticariaraclar',[HomeController::class,'ticariaraclar'])->name('ticariaraclar');
+Route::get('/araziaraclar',[HomeController::class,'araziaraclar'])->name('araziaraclar');
+Route::get('/tumarclar',[HomeController::class,'tumarclar'])->name('tumarclar');
+Route::get('/otomobil',[HomeController::class,'otomobil'])->name('otomobil');
+Route::get('otomobil_detay/{id}',[HomeController::class,'otomobil_detay'])->name('otomobil_detay');
+Route::get('araziaraclar_detay/{id}',[HomeController::class,'araziaraclar_detay'])->name('araziaraclar_detay');
+Route::get('ticariaraclar_detay/{id}',[HomeController::class,'ticariaraclar_detay'])->name('ticariaraclar_detay');
+Route::get('tumarclar_detay/{id}',[HomeController::class,'tumarclar_detay'])->name('tumarclar_detay');
+Route::post('/reservation',[HomeController::class,'reservation'])->name('reservation');

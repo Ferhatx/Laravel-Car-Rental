@@ -10,7 +10,7 @@
     <h1 class="h3 mb-4 text-gray-800">Araç Ekle</h1>
     <div class="card shadow mb-4">
         <div class="card-body">
-            <form class="user" action="{{route('admin_car_store')}}" method="get" enctype="multipart/form-data">
+            <form class="user" action="{{route('admin_car_store')}}" method="post" enctype="multipart/form-data">
                 @csrf
             <div class="form-group">
                 <label>Category</label>
@@ -21,6 +21,7 @@
                     @endforeach
                 </select>
             </div>
+
                 <div class="form-group">
                     <label>Alt Category</label>
                     <select name="sub_category_id" class="form-control">
@@ -71,6 +72,14 @@
                         <option value="True">True</option>
                         <option value="False">False</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label>Kaç Kişilik</label>
+                        <input type="text" name="kisi" class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kaç Kişilik" required />
+                </div>
+                <div class="form-group">
+                    <label>Kapı</label>
+                    <input type="text" name="kisi" class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kapı Sayısı" required />
                 </div>
             <div class="form-group">
                 <label>Slug</label>

@@ -41,15 +41,16 @@
                     </li>
 
 
-                    <li class="nav-item"><a class="nav-link" href={{route('filo_kiralama')}}>Filo Kiralama</a></li>
+
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Filomuz</a>
 
                         <div class="dropdown-menu">
-                            @foreach($parentCategories as $rs)
-                            <a class="dropdown-item" href="#">{{$rs->title}}</a>
-                            @endforeach
+                            <a class="dropdown-item" href="{{route('otomobil')}}">Otomobil</a>
+                            <a class="dropdown-item" href={{route('ticariaraclar')}}>Ticari Araç</a>
+                            <a class="dropdown-item" href={{route('araziaraclar')}}>Arazi Araçları</a>
+                            <a class="dropdown-item" href={{route('tumarclar')}}>Tüm Araçlar</a>
                         </div>
                     </li>
 

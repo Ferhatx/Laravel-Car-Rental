@@ -19,14 +19,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Laravel Frequently Asked Question Accordion Menu Sıkça Sorulan Sorular">
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Car Image Gallery">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Reservation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_131217_create_reservations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_142832_reservation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/assets/css/lightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/assets/js/lightbox-plus-jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/reservation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/reservation_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/araziaraclar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/araziaraclar_detay.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/otomobil.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/otomobil_detay.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/ticariaraclar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/ticariaraclar_detay.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/tumarclar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/tumarclar_detay.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/car_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_minabout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_minabout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/iletisim.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/iletisim.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +257,8 @@
       <workItem from="1612743482679" duration="1833000" />
       <workItem from="1612786847699" duration="29522000" />
       <workItem from="1612852850575" duration="9010000" />
-      <workItem from="1612920531487" duration="7200000" />
+      <workItem from="1612920531487" duration="14876000" />
+      <workItem from="1612949041284" duration="28114000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -372,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612854044199</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Car Image Gallery">
+      <created>1612927862504</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1612927862504</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +445,8 @@
     <MESSAGE value="Hakkımızda,Vizyonumuz,Misyonumuz,Kira Sözleşmesi,Kiralama Koşulları,Sıkça Sorulan Sorular, User Profil Sayafları" />
     <MESSAGE value="Laravel Contact Mesajları ve Admin panelde yönetimi" />
     <MESSAGE value="Laravel Frequently Asked Question Accordion Menu Sıkça Sorulan Sorular" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laravel Frequently Asked Question Accordion Menu Sıkça Sorulan Sorular" />
+    <MESSAGE value="Car Image Gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Car Image Gallery" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -436,10 +465,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612294433270" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612927681086">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612980386045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612927681086" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612980386045" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1612467929117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -456,10 +485,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="471" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1612377577452" />
-    <state x="746" y="279" key="NewPhpFileDialog" timestamp="1612798803604">
+    <state x="746" y="279" key="NewPhpFileDialog" timestamp="1612933783996">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="746" y="279" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1612798803604" />
+    <state x="746" y="279" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1612933783996" />
     <state x="528" y="66" key="RollbackChangesDialog" timestamp="1608850238738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -468,10 +497,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612854057042">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612927870753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612854057042" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612927870753" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -480,10 +509,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1612467842519" />
-    <state x="0" y="0" width="1009" height="614" key="dock-window-1" timestamp="1607283915833">
+    <state x="324" y="0" width="1058" height="715" key="dock-window-1" timestamp="1612935113600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" width="1009" height="614" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607283915833" />
+    <state x="324" y="0" width="1058" height="715" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1612935113600" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1612853253272">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

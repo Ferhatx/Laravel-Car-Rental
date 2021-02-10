@@ -56,7 +56,14 @@
                     <label>Ücret</label>
                     <input type="text" name="price" value="{{$data->price}}" class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Günlük Kiralama Ücret" required />
                 </div>
-
+                <div class="form-group">
+                    <label>Kapı</label>
+                    <input type="text" name="kapi" value="{{$data->kapi}}"  class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kapı Sayısı" required />
+                </div>
+                <div class="form-group">
+                    <label>Kaç Kişilik</label>
+                    <input type="text" name="kisilik" value="{{$data->kisilik}}"  class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kaç Kişilik" required />
+                </div>
                 <div class="form-group">
                     <label>Yakıt</label>
                     <select name="yakit" class="form-control">

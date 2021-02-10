@@ -84,7 +84,7 @@
                                 </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <fieldset>
-                                    <input name="ipaddres" type="hidden" class="form-control" value="@php echo $_SERVER["REMOTE_ADDR"]; @endphp" id="name" placeholder="Adınız ve Soyadınız" required="">
+                                    <input name="ipaddres" type="hidden" class="form-control" value="@php echo $_SERVER["REMOTE_ADDR"]; @endphp" id="name">
                                 </fieldset>
                             </div>
                                 <div class="col-lg-12">

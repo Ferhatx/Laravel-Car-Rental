@@ -24,9 +24,9 @@
 </head>
 
 <body>
-@include('home._header');
+@include('home._header')
 @yield("content")
 
-@include('home._footer');
+@include('home._footer')
 </body>
 </html>

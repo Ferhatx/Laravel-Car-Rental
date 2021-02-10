@@ -61,6 +61,8 @@ class CarController extends Controller
             $data->vites = $request->input('vites');
             $data->yakit = $request->input('yakit');
             $data->klima = $request->input('klima');
+            $data->kapi = $request->input('kapi');
+            $data->kisilik = $request->input('kisilik');
             $data->slug = $request->input('slug');
             $data->status = $request->input('status');
              if($request->file('image') != null) {
@@ -173,6 +175,8 @@ class CarController extends Controller
         $data->price = $request->input('price');
         $data->yakit = $request->input('yakit');
         $data->vites = $request->input('vites');
+        $data->kapi = $request->input('kapi');
+        $data->kisilik = $request->input('kisilik');
         $data->klima = $request->input('klima');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
