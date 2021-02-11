@@ -38,7 +38,14 @@
                                 <tr><th>Ücret(Kdv Dahil)</th><td>{{$data->total}}</td></tr>
                                 <tr><th>Admin Mesajı</th><td><textarea id="editor1" name="note_icerik" rows="10" cols="50">{{$data->note}}</textarea></td><tr>
                                 <tr><th>İp Adress</th><td>{{$data->ip}}</td>></tr>
-                                <tr><th>Status</th> <td>{{$data->status}}</td></tr>
+                                <tr><th>Status</th>
+                                    <td>
+                                        <select name="status" id="form-contol">
+                                            <option value="Rezervasyon Onaylandı" selected="selected">Rezervasyon Onaylandı</option>
+                                            <option value="Rezervasyon İptal Edildi">Rezervasyon İptal Edildi</option>
+                                        </select>
+
+                                    </td></tr>
 
 
                                 <tr><th colspan="1"></th><td><button class="btn btn-primary" type="submit">Mesaj Gönder</button></td></tr>

@@ -46,14 +46,19 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{route('admin_reservation')}}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo2"
+           aria-expanded="true" aria-controls="collapseTwo">
             <i class="far fa-calendar-check"></i>
-            <span>Rezervasyonlar</span></a>
+            <span>Rezervasyonlar</span>
+        </a>
+        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin_reservation')}}">Tüm Rezervasyonlar</a>
+                <a class="collapse-item" href="{{route('reservation_onay')}}">Onaylanan Rezervasyonlar</a>
+                <a class="collapse-item" href="{{route('reservation_red')}}">Reddedilen Rezervasyonlar</a>
+            </div>
+        </div>
     </li>
-
-
-
-
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

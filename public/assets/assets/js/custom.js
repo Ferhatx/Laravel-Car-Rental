@@ -12,7 +12,7 @@ jQuery( document ).ready(function( $ ) {
                 $("#preloader").css("visibility", "hidden").fadeOut();
             }, 300);
         });
-        
+
 
         $(window).scroll(function() {
           var scroll = $(window).scrollTop();
@@ -25,7 +25,7 @@ jQuery( document ).ready(function( $ ) {
             $("header").removeClass("background-header");
           }
         });
-        
+
         if ($('.owl-clients').length) {
             $('.owl-clients').owlCarousel({
                 loop: true,
@@ -33,9 +33,9 @@ jQuery( document ).ready(function( $ ) {
                 dots: true,
                 items: 1,
                 margin: 30,
-                autoplay: false,
+                autoplay: true,
                 smartSpeed: 700,
-                autoplayTimeout: 6000,
+                autoplayTimeout: 7000,
                 responsive: {
                     0: {
                         items: 1,
@@ -64,9 +64,9 @@ jQuery( document ).ready(function( $ ) {
                 dots: true,
                 items: 1,
                 margin: 0,
-                autoplay: false,
+                autoplay: true,
                 smartSpeed: 700,
-                autoplayTimeout: 6000,
+                autoplayTimeout: 5000,
                 responsive: {
                     0: {
                         items: 1,

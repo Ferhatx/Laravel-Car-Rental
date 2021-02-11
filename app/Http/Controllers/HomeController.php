@@ -115,7 +115,7 @@ class HomeController extends Controller
 
     public function tumarclar(){
         $data = DB::table( 'cars')->get();
-        return view('home.araziaraclar',['data'=>$data]);
+        return view('home.tumarclar',['data'=>$data]);
     }
 
     public function tumarclar_detay($id){
@@ -155,5 +155,11 @@ class HomeController extends Controller
         return redirect()->route('anasayfa')->with('success','Randevunuz Kaydedilmiştir. Teşekkür ederiz.');
     }
 
+
+
+    public function user_reservations(){
+        $data = DB::table( 'reservations')->get()->where('user_id','=',Auth::id());
+        return view('home.user_reservations',['data' => $data]);
+    }
 
 }

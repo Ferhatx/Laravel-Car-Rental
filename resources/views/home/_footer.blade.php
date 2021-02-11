@@ -21,3 +21,24 @@ $settings=\App\Http\Controllers\HomeController::getSetting();
 <!-- Additional Scripts -->
 <script src="{{asset('assets')}}/assets/js/custom.js"></script>
 <script src="{{asset('assets')}}/assets/js/owl.js"></script>
+
+<script>
+    $('.uclu_galeri').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    })
+</script>

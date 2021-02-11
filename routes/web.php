@@ -35,6 +35,7 @@ Route::middleware('admin')->group(function () {
         Route::post('update/{id}', [App\Http\Controllers\Admin\CarController::class, 'update'])->name('admin_car_update');
         Route::get('delete/{id}', [App\Http\Controllers\Admin\CarController::class, 'destroy'])->name('admin_car_delete');
         Route::get('show', [App\Http\Controllers\Admin\CarController::class, 'show'])->name('admin_car_show');
+
     });
 
 //İLETİŞİM MESAJI
@@ -76,6 +77,7 @@ Route::middleware('admin')->group(function () {
         Route::post('update/{id}', [App\Http\Controllers\Admin\ReservationController::class, 'update'])->name('admin_reservation_update');
         Route::get('delete/{id}', [App\Http\Controllers\Admin\ReservationController::class, 'destroy'])->name('admin_reservation_delete');
         Route::get('show', [App\Http\Controllers\Admin\ReservationController::class, 'show'])->name('admin_reservation_show');
+
     });
 
 
@@ -95,7 +97,12 @@ Route::middleware('admin')->group(function () {
     Route::post('page/update', [App\Http\Controllers\Admin\PageController::class, 'update'])->name('admin_page_update');
 
 
-        });
+
+    Route::get('reservation_onay', [App\Http\Controllers\Admin\ReservationController::class, 'onay'])->name('reservation_onay');
+    Route::get('reservation_red', [App\Http\Controllers\Admin\ReservationController::class, 'red'])->name('reservation_red');
+
+
+});
 
     });
 
@@ -166,3 +173,5 @@ Route::get('araziaraclar_detay/{id}',[HomeController::class,'araziaraclar_detay'
 Route::get('ticariaraclar_detay/{id}',[HomeController::class,'ticariaraclar_detay'])->name('ticariaraclar_detay');
 Route::get('tumarclar_detay/{id}',[HomeController::class,'tumarclar_detay'])->name('tumarclar_detay');
 Route::post('/reservation',[HomeController::class,'reservation'])->name('reservation');
+Route::get('/user_reservations',[HomeController::class,'user_reservations'])->name('user_reservations');
+//Route::post('/getcar',[HomeController::class,'getcar'])->name('getcar');
