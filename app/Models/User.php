@@ -18,11 +18,11 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+public function roles(){
+    return $this->belongsToMany(Role::class);
+}
 
-    public function reservation(){
-        return $this->hasMany(Reservation::class);
 
-    }
     /**
      * The attributes that are mass assignable.
      *
@@ -45,6 +45,7 @@ class User extends Authenticatable
         'two_factor_recovery_codes',
         'two_factor_secret',
     ];
+
 
     /**
      * The attributes that should be cast to native types.

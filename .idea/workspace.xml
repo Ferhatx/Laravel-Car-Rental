@@ -19,34 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Car Image Gallery">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Reservation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_131217_create_reservations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_142832_reservation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/assets/css/lightbox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/assets/js/lightbox-plus-jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/reservation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/reservation_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/araziaraclar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/araziaraclar_detay.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/otomobil.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/otomobil_detay.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/ticariaraclar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/ticariaraclar_detay.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/tumarclar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/tumarclar_detay.blade.php" afterDir="false" />
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Araç Filo Menülerinin düzenlenmesi ve Randevu sistemnin oluşturulması">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_214718_create_roles_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_214947_role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_215619_create_role_user_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_215928_role_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/car_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reservation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_minabout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_minabout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/iletisim.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/iletisim.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,7 +244,8 @@
       <workItem from="1612786847699" duration="29522000" />
       <workItem from="1612852850575" duration="9010000" />
       <workItem from="1612920531487" duration="14876000" />
-      <workItem from="1612949041284" duration="28114000" />
+      <workItem from="1612949041284" duration="39078000" />
+      <workItem from="1613015188479" duration="8473000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -400,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612927862504</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Araç Filo Menülerinin düzenlenmesi ve Randevu sistemnin oluşturulması">
+      <created>1612980909840</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1612980909840</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +440,8 @@
     <MESSAGE value="Laravel Contact Mesajları ve Admin panelde yönetimi" />
     <MESSAGE value="Laravel Frequently Asked Question Accordion Menu Sıkça Sorulan Sorular" />
     <MESSAGE value="Car Image Gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Car Image Gallery" />
+    <MESSAGE value="Araç Filo Menülerinin düzenlenmesi ve Randevu sistemnin oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="Araç Filo Menülerinin düzenlenmesi ve Randevu sistemnin oluşturulması" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -461,14 +456,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1608897284288" />
+    <state x="679" y="111" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612992470817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="679" y="111" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1612992470817" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612294433270">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612294433270" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612980386045">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612988143895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612980386045" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612988143895" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1612467929117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -497,10 +496,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612927870753">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1612980921066">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612927870753" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612980921066" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -513,13 +512,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="324" y="0" width="1058" height="715" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1612935113600" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1612853253272">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1612997092607">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612853253272" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1612711476579">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612997092607" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1612996619289">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1612711476579" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1612996619289" />
   </component>
 </project>
