@@ -25,7 +25,6 @@
                                     </fieldset>
                                     <input type="hidden" name="price" value="{{$rs2->price}}">
                                     <input name="ipaddres" type="hidden" class="form-control" value="@php echo $_SERVER["REMOTE_ADDR"]; @endphp" id="name">
-
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     Alış Ofisi

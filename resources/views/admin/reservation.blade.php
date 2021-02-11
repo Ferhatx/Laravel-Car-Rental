@@ -35,7 +35,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($datalist as $rs)
+                        @foreach($data as $rs)
                         <tr>
                             <td>{{$rs->id}}</td>
                             <td>{{$rs->user->name}}</td>
@@ -51,7 +51,7 @@
                             <td>{{$rs->ip}}</td>
                             <td>
                              <a title="Rezervasyon Kontrol" target="_blank" href="{{route('admin_reservation_edit',['id'=>$rs->id])}}" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>
-                            <a title="Sil" href="{{route('admin_message_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fas fa-trash"></i></a></td>
+                            <a title="Sil" href="{{route('admin_reservation_delete',['id'=>$rs->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')"><i class="fas fa-trash"></i></a></td>
                         </tr>
                         @endforeach
                         </tbody>

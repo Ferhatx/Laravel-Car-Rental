@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
@@ -15,8 +16,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        $datalist=Reservation::all();
-        return view('admin.reservation', ['datalist' => $datalist]);
+        $data=Reservation::all();
+        return view('admin.reservation', ['data' => $data]);
     }
 
     /**
@@ -60,8 +61,6 @@ class ReservationController extends Controller
     public function edit(Reservation $reservation,$id)
     {
         $data=Reservation::find($id);
-        $data->status='Read';
-        $data->save();
 
         return view('admin.reservation_edit',['data'=>$data]);
     }
@@ -76,7 +75,7 @@ class ReservationController extends Controller
     public function update(Request $request, Reservation $reservation,$id)
     {
         $data=Reservation::find($id);
-        $data->status='Read';
+        $data->status=$request->input('status');;
         $data->note=$request->input('note_icerik');
         $data->save();
 
@@ -89,8 +88,26 @@ class ReservationController extends Controller
      * @param  \App\Models\Reservation  $reservation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reservation $reservation)
+    public function destroy(Reservation $reservation,$id)
     {
-        //
+        $data=Reservation::find($id);
+        $data->delete();
+        return redirect()->route('admin_reservation')->with('info','Rezervasyonunuz Silinmiştir.');
     }
+
+    public function onay(){
+        $data = DB::table( 'reservations')->get()->where('status','=','Rezervasyon Onaylandı');
+        return view('admin.reservation_onay',['data' => $data]);
+
+    }
+
+    public function red(){
+        $data = DB::table( 'reservations')->get()->where('status','=','Rezervasyon İptal Edildi');
+        return view('admin.reservation_onay',['data' => $data]);
+
+    }
+
+
+
+
 }
