@@ -64,6 +64,13 @@
             <i class="fas fa-comment"></i>
             <span>Yorumlar</span></a>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('admin_kullanici')}}">
+            <i class="fas fa-user"></i>
+            <span>Kullanıcılar</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

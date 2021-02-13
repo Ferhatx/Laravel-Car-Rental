@@ -83,14 +83,14 @@ class HomeController extends Controller
 
 
     public function otomobil(){
-        $data = DB::table( 'cars')->get()->where('category_id','Otomobil');
+        $data = DB::table( 'cars')->get()->where('category_id','Otomobil')->where('status','=','True');
         return view('home.otomobil',['data'=>$data]);
     }
 
     public function otomobil_detay($id){
         $data=Car::find($id);
         $datalist = DB::table( 'images')->get()->where('araba_id','=',$id);
-        $datalist2 = DB::table( 'reviews')->get()->where('arac_id','=',$id);
+        $datalist2 = DB::table( 'reviews')->get()->where('arac_id','=',$id)->where('status','=','True');
         return view('home.otomobil_detay',['data'=>$data,'datalist'=>$datalist,'datalist2'=>$datalist2]);
     }
 
@@ -124,7 +124,7 @@ class HomeController extends Controller
     public function tumarclar_detay($id){
         $data=Car::find($id);
         $datalist = DB::table( 'images')->get()->where('araba_id','=',$id);
-        $datalist2 = DB::table( 'reviews')->get()->where('arac_id','=',$id);
+        $datalist2 = DB::table( 'reviews')->get()->where('arac_id','=',$id)->where('status','=','True');
         return view('home.tumarclar_detay',['data'=>$data,'datalist'=>$datalist,'datalist2'=>$datalist2]);
     }
 
@@ -176,7 +176,7 @@ class HomeController extends Controller
         $data4->subject=$request->input('yorum_konu');
         $data4->review=$request->input('yorum_icerik');
         $data4->IP=$request->input('IP');
-        $data4->status='True';
+        $data4->status='New';
         $data4->arac_id=$id;
         $data4->save();
 

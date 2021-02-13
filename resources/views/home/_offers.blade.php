@@ -3,9 +3,7 @@
 <div id='search'>
     <form action='#' id='searchthis' method='post' style='display:inline;'>
         @csrf
-        @livewire('search')
-        <input id='search-btn' style='background: #F33F3F;  border: 2px outset #F33F3F;float:right; color: #ffffff; font-weight: bold;' type='submit' value='Ara'/>
-        @livewireScripts
+      
     </form>
 </div>
 <br/>

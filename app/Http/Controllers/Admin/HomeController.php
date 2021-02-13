@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -48,7 +49,10 @@ class HomeController extends Controller
         return redirect('/');
     }
 
-
+    public function kullanici(){
+        $data=User::all();
+        return view('admin.user', ['data' => $data]);
+    }
 
 
 

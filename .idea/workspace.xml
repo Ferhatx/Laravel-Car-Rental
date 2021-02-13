@@ -19,41 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Rezervasyon Admin Paneli yönetim ve Kullanıcını yönetim ,Ana menü araç slider eklenmesi">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReviewController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_11_185922_create_reviews_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_11_192847_review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/review.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/review_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/appxx.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/review.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/policy.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/terms.blade.php" afterDir="false" />
+    <list default="true" id="17b4d250-9759-48e9-b65e-f224d4432e2e" name="Default Changelist" comment="Yorumlar , Araç Yorumlar ,Ana Sayfa Düzenleme işlemleri">
+      <change afterPath="$PROJECT_DIR$/public/assets/assets/css/fontawesome_old.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/assets/css/fontawesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/assets/css/fontawesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_comments.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_minabout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_minabout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_mincontact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_mincontact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/otomobil_detay.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/otomobil_detay.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/ticariaraclar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/ticariaraclar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/ticariaraclar_detay.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/ticariaraclar_detay.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/tumarclar_detay.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/tumarclar_detay.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/user_reservations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_reservations.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/review.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/review.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_offers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_offers.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +250,7 @@
       <workItem from="1613015188479" duration="54629000" />
       <workItem from="1613110186012" duration="42699000" />
       <workItem from="1613208289702" duration="322000" />
-      <workItem from="1613210769977" duration="1268000" />
+      <workItem from="1613210769977" duration="18257000" />
     </task>
     <task id="LOCAL-00001" summary="index değişti">
       <created>1607292228910</created>
@@ -442,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613069041091</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Yorumlar , Araç Yorumlar ,Ana Sayfa Düzenleme işlemleri">
+      <created>1613212148313</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1613212148313</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +476,8 @@
     <MESSAGE value="Araç Filo Menülerinin düzenlenmesi ve Randevu sistemnin oluşturulması" />
     <MESSAGE value="Laravel User Admin Role Permission Yetkilendirmeleri" />
     <MESSAGE value="Rezervasyon Admin Paneli yönetim ve Kullanıcını yönetim ,Ana menü araç slider eklenmesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rezervasyon Admin Paneli yönetim ve Kullanıcını yönetim ,Ana menü araç slider eklenmesi" />
+    <MESSAGE value="Yorumlar , Araç Yorumlar ,Ana Sayfa Düzenleme işlemleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yorumlar , Araç Yorumlar ,Ana Sayfa Düzenleme işlemleri" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="188" key="#Notifications" timestamp="1608903512025">
@@ -514,10 +500,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612294433270" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613156382944">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613237743717">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613156382944" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613237743717" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1612467929117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -546,10 +532,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607291638247" />
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1613069055226">
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2" timestamp="1613212193534">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1613069055226" />
+    <state x="292" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1613212193534" />
     <state x="556" y="98" width="391" height="532" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609199444513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -566,10 +552,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613055149191" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1612997092607">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1613234413528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612997092607" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1613234413528" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1612996619289">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

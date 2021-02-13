@@ -81,6 +81,7 @@ Route::middleware('admin')->group(function () {
     });
 
 
+
 //İMAGE EKLEDİĞİM YER
     Route::prefix('image')->group(function () {
         Route::get('create/{id}', [App\Http\Controllers\Admin\ImageController::class, 'create'])->name('admin_image_add');
@@ -116,6 +117,7 @@ Route::middleware('admin')->group(function () {
     });
 
 
+    Route::get('kullanici', [App\Http\Controllers\Admin\HomeController::class, 'kullanici'])->name('admin_kullanici');
 
 
 
