@@ -76,7 +76,7 @@
 
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{route('myprofile')}}">Profilim</a>
-                            <a class="dropdown-item" href="{{'user_reservations'}}">Rezervasyonlar</a>
+                            <a class="dropdown-item" href="{{'user_reservations'}}">Kullanıcı İşlemlerim</a>
                             <a class="dropdown-item" href="{{route('logout')}}">Çıkış</a>
                         </div>
                         </li>

@@ -42,14 +42,26 @@
                     <div> <b>Modeli</b> : {{$data->modeli}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Yakıt</b> : {{$data->yakit}}<div>
                             <div><b>Klima : {{$data->klima}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Vites</b> : {{$data->vites}}<div>
                                    <br/>
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <div class="col-lg-12">
-                                        <fieldset>
-                                            <button type="submit" id="form-submit" class="filled-button" onClick="location.href='{{route('anasayfa')}}'" >Rezervasyon  Oluştur</button>
-                                        </fieldset>
-                                    </div>
-                                    </div>
                 </div>
             </div>
         </div>
+                        <div class="col-md-12">
+                            <div class="text-content">
+                                <h2>RANDEVU OLUŞTURUN</h2>
+                                <hr>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 @endsection

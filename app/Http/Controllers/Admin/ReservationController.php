@@ -103,7 +103,7 @@ class ReservationController extends Controller
 
     public function red(){
         $data = DB::table( 'reservations')->get()->where('status','=','Rezervasyon İptal Edildi');
-        return view('admin.reservation_onay',['data' => $data]);
+        return view('admin.reservation_red',['data' => $data]);
 
     }
 

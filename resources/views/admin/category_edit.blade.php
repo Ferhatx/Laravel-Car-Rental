@@ -46,9 +46,6 @@
                         <option value="False">False</option>
                     </select>
                 </div>
-            <div class="form-group">
-                <label>İMAGE SONRADAN EKLE</label>
-            </div>
             <button class="btn btn-primary" type="submit">Kategori Güncelle</button>
             </form>
         </div>

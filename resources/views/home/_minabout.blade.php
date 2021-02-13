@@ -75,7 +75,11 @@
 
                                 <div class="col-lg-12">
                                     <fieldset>
+                                        @auth
                                         <button type="submit" id="form-submit" class="filled-button">Rezervasyonu Oluştur</button>
+                                        @else
+                                            <a href="/login" class="filled-button">Randevu Oluşturmak için Lütfen Giriş Yapın</a>
+                                        @endauth
                                     </fieldset>
                                 </div>
 

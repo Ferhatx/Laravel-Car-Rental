@@ -102,6 +102,24 @@ Route::middleware('admin')->group(function () {
     Route::get('reservation_red', [App\Http\Controllers\Admin\ReservationController::class, 'red'])->name('reservation_red');
 
 
+
+
+
+//YORUMLAR
+    Route::prefix('review')->group(function () {
+        Route::get('/', [App\Http\Controllers\Admin\ReviewController::class, 'index'])->name('admin_review');
+        Route::get('edit/{id}', [App\Http\Controllers\Admin\ReviewController::class, 'edit'])->name('admin_review_edit');
+        Route::post('update/{id}', [App\Http\Controllers\Admin\ReviewController::class, 'update'])->name('admin_review_update');
+        Route::get('delete/{id}', [App\Http\Controllers\Admin\ReviewController::class, 'destroy'])->name('admin_review_delete');
+        Route::get('show', [App\Http\Controllers\Admin\ReviewController::class, 'show'])->name('admin_review_show');
+
+    });
+
+
+
+
+
+
 });
 
     });
@@ -142,7 +160,7 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
 
-    Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
+    Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
 
 });
 
@@ -173,5 +191,9 @@ Route::get('araziaraclar_detay/{id}',[HomeController::class,'araziaraclar_detay'
 Route::get('ticariaraclar_detay/{id}',[HomeController::class,'ticariaraclar_detay'])->name('ticariaraclar_detay');
 Route::get('tumarclar_detay/{id}',[HomeController::class,'tumarclar_detay'])->name('tumarclar_detay');
 Route::post('/reservation',[HomeController::class,'reservation'])->name('reservation');
+Route::get('/reservation_cancel/{id}',[HomeController::class,'reservation_cancel'])->name('reservation_cancel');
 Route::get('/user_reservations',[HomeController::class,'user_reservations'])->name('user_reservations');
+Route::post('/yorum_kaydet/{id}',[HomeController::class,'yorum_kaydet'])->name('yorum_kaydet');
+Route::get('/yorum_sil/{id}',[HomeController::class,'yorum_sil'])->name('yorum_sil');
+
 //Route::post('/getcar',[HomeController::class,'getcar'])->name('getcar');

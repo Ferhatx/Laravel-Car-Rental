@@ -59,7 +59,11 @@
             </div>
         </div>
     </li>
-
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('admin_review')}}">
+            <i class="fas fa-comment"></i>
+            <span>Yorumlar</span></a>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

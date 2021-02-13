@@ -8,6 +8,7 @@ use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Page;
 use App\Models\Reservation;
+use App\Models\Review;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,8 @@ class HomeController extends Controller
        // $data = DB::table( 'settings')->get()->where('id',1);
          $data=Setting::first();
          $data2=Car::all();
-        return view('home.index',['data'=>$data,'data2'=>$data2]);
+         $data3=Review::all();
+        return view('home.index',['data'=>$data,'data2'=>$data2,'data3'=>$data3]);
     }
 
     public function hakkimizda(){
@@ -88,7 +90,8 @@ class HomeController extends Controller
     public function otomobil_detay($id){
         $data=Car::find($id);
         $datalist = DB::table( 'images')->get()->where('araba_id','=',$id);
-        return view('home.otomobil_detay',['data'=>$data,'datalist'=>$datalist]);
+        $datalist2 = DB::table( 'reviews')->get()->where('arac_id','=',$id);
+        return view('home.otomobil_detay',['data'=>$data,'datalist'=>$datalist,'datalist2'=>$datalist2]);
     }
 
     public function ticariaraclar(){
@@ -121,7 +124,8 @@ class HomeController extends Controller
     public function tumarclar_detay($id){
         $data=Car::find($id);
         $datalist = DB::table( 'images')->get()->where('araba_id','=',$id);
-        return view('home.tumarclar_detay',['data'=>$data,'datalist'=>$datalist]);
+        $datalist2 = DB::table( 'reviews')->get()->where('arac_id','=',$id);
+        return view('home.tumarclar_detay',['data'=>$data,'datalist'=>$datalist,'datalist2'=>$datalist2]);
     }
 
     public function reservation(Request $request){
@@ -159,7 +163,41 @@ class HomeController extends Controller
 
     public function user_reservations(){
         $data = DB::table( 'reservations')->get()->where('user_id','=',Auth::id());
-        return view('home.user_reservations',['data' => $data]);
+        $data2=Review::where('user_id',Auth::user()->name)->get();
+        #$data2 = DB::table( 'reviews')->get()->where('user_id','=',Auth::user()->name);
+        return view('home.user_reservations',['data' => $data,'data2' => $data2]);
     }
+
+
+    public function yorum_kaydet(Request $request,$id){
+        $data4=new Review();
+        $data4->user_id =Auth::user()->name;
+        $data4->category_id=$request->input('arac_id');
+        $data4->subject=$request->input('yorum_konu');
+        $data4->review=$request->input('yorum_icerik');
+        $data4->IP=$request->input('IP');
+        $data4->status='True';
+        $data4->arac_id=$id;
+        $data4->save();
+
+        return redirect()->route('tumarclar_detay',['id'=>$id]);
+
+    }
+
+    public function reservation_cancel(Request $request,$id){
+        $data=Reservation::find($id);
+        $data->status='Kullanıcı Tarafından İptal Edildi';
+        $data->save();
+        return redirect()->route('user_reservations');
+    }
+
+    public function yorum_sil(Request $request,$id)
+    {
+        DB::table('reviews')->where('id', '=', $id)->delete();
+        return redirect()->route('user_reservations')->with('info','Yorumunuz Silinmiştir.');
+    }
+
+
+
 
 }

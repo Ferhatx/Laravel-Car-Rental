@@ -75,11 +75,11 @@
                 </div>
                 <div class="form-group">
                     <label>Kaç Kişilik</label>
-                        <input type="text" name="kisi" class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kaç Kişilik" required />
+                        <input type="text" name="kisilik" class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kaç Kişilik" required />
                 </div>
                 <div class="form-group">
                     <label>Kapı</label>
-                    <input type="text" name="kisi" class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kapı Sayısı" required />
+                    <input type="text" name="kapi" class="form-control form-control-user" id="exampleFirstName" size="10" placeholder="Kapı Sayısı" required />
                 </div>
             <div class="form-group">
                 <label>Slug</label>
