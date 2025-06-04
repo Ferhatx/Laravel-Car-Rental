@@ -1,73 +1,73 @@
 # Laravel Car Rental Web Application
 
-Bu proje, Laravel ile geliştirilmiş bir **araç kiralama web uygulamasıdır**. Kullanıcılar araç kiralayabilir, yönetici paneli üzerinden araç ve kira işlemleri takip edilebilir. 
+This is a **Car Rental Web Application** built with Laravel. Users can rent cars, and administrators can manage vehicles, rental operations, and track financial statistics.
 
-## 🚗 Proje Özellikleri
+## 🚗 Features
 
-### Kullanıcı Paneli (Ana Sayfa)
-- Kiralık araçların listesi
-- Randevu sistemi ile araç kiralama (günlük)
-- Araçların detay sayfasında:
-  - Kiralanma süresi
-  - Araç özellikleri
+### User Panel (Homepage)
+- List of available rental cars
+- Reservation system for daily rentals
+- Car detail page with:
+  - Rental duration
+  - Car specifications
 
-### Yönetim Paneli
-- Kiralanan araçların listesi
-- Araç kira ücretleri ve kar/zarar tablosu
-- Yeni araç ekleme
-- Araçların güncellenmesi veya silinmesi
+### Admin Panel
+- List of all rented vehicles
+- Display of rental fees and profit/loss table
+- Add new cars
+- Update or delete existing cars
 
-## 🛠️ Kurulum Talimatları
+## 🛠️ Installation Instructions
 
-### Gereksinimler
+### Requirements
 - PHP >= 8.0
 - Composer
 - MySQL
 - Laravel 10+
-- Node.js & NPM (ön uç derlemeleri için)
+- Node.js & NPM (for frontend assets)
 
-### Kurulum Adımları
+### Setup Steps
 
 ```bash
-# Projeyi klonlayın
+# Clone the repository
 git clone https://github.com/Ferhatx/Laravel-Car-Rental.git
 
 cd Laravel-Car-Rental
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 composer install
 npm install && npm run dev
 
-# .env dosyasını oluşturun
+# Create .env file
 cp .env.example .env
 
-# Uygulama anahtarını oluşturun
+# Generate application key
 php artisan key:generate
 
-# Veritabanını ayarlayın (env dosyasına bilgileri girin)
+# Configure your database settings in the .env file
 php artisan migrate --seed
 
-# Sunucuyu başlatın
+# Start the development server
 php artisan serve
 ```
 
-## 📸 Ekran Görüntüleri
-> Buraya proje ekran görüntülerini ekleyebilirsiniz.
+## 📸 Screenshots
+> You can add project screenshots here.
 
-## 📊 Yönetim Paneli Özellikleri
-- Tüm kiralama işlemlerinin listesi
-- Araç kira ücretleri ve elde edilen kazanç
-- Yeni araç ekleme ve mevcut araç yönetimi
+## 📊 Admin Panel Features
+- List of all rental transactions
+- Rental fees and profit tracking
+- Add and manage vehicles
 
-## 🧑‍💻 Geliştirici
+## 🧑‍💻 Developer
 
 **Ferhatx**  
-🔗 [GitHub Profilim](https://github.com/Ferhatx)
+🔗 [My GitHub Profile](https://github.com/Ferhatx)
 
-## 📁 Lisans
+## 📁 License
 
-Bu proje MIT lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ---
 
-Her türlü geri bildiriminiz ve katkılarınız için lütfen pull request gönderin veya issue açın.
+Feel free to contribute by opening issues or submitting pull requests.
