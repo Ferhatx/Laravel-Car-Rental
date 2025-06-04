@@ -64,10 +64,4 @@ php artisan serve
 **Ferhatx**  
 🔗 [My GitHub Profile](https://github.com/Ferhatx)
 
-## 📁 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-Feel free to contribute by opening issues or submitting pull requests.
